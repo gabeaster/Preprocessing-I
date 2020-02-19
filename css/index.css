@@ -83,9 +83,6 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -100,7 +97,6 @@ footer,
 header,
 hgroup,
 menu,
-nav,
 section {
   display: block;
 }
@@ -129,9 +125,86 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  max-width: 100%;
 }
 html,
 body {
   height: 100%;
-  background-color: red;
+  background-color: #C38D9E;
+  font-family: 'Quicksand', sans-serif;
+  color: #E8A87C;
+}
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Heebo'), local('Heebo-Regular'), url(https://fonts.gstatic.com/s/heebo/v5/NGS6v5_NC0k9P9H2TbQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/quicksand/v20/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-xw.ttf) format('truetype');
+}
+.container {
+  margin: 10px;
+  background-color: #41B3A3;
+}
+h1,
+h2,
+h3,
+h4,
+a {
+  color: #E27D60;
+  font-family: 'Heebo', sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header img {
+  width: 10%;
+  height: auto;
+}
+header .header-div {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40%;
+  justify-content: space-around;
+}
+header .header-div nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .header-div h1 {
+  font-size: 2rem;
+}
+.contentContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.contentContainer .left {
+  width: 30%;
+}
+.contentContainer .right {
+  width: 60%;
+}
+hr {
+  width: 95%;
+}
+footer {
+  display: flex;
+}
+footer img {
+  width: 10%;
+  height: auto;
+}
+footer nav {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  align-items: center;
 }

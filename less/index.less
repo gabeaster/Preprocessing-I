@@ -17,16 +17,16 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
+	//margin: 0;
+	//padding: 0;
+	//border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, section {
 	display: block;
 }
 body {
@@ -51,10 +51,118 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+	max-width: 100%;
 }
 
 html, body {
     height: 100%;
-	background-color: red;
+	background-color:@accent-color;
+	font-family:@main-font;
+	color:@font-color;
 }
 
+//import and variables
+@import url('https://fonts.googleapis.com/css?family=Heebo|Quicksand&display=swap');
+
+@header-font: 'Heebo', sans-serif;
+@main-font: 'Quicksand', sans-serif;
+@header-color:#E27D60;
+@border-color:#85DCB0;
+@font-color:#E8A87C;
+@accent-color:#C38D9E;
+@background-color:#41B3A3;
+//mixins
+.flex(){
+	display: flex;
+}
+.flexRowReverse(){
+	display:flex;
+	flex-direction:row-reverse;
+}
+.flexColumn(){
+	display: flex;
+	flex-direction: column;
+}
+.border(){
+	border: 1px dotted @border-color;
+}
+
+.centered(){
+	justify-content:space-evenly;
+	align-items: center;
+}
+
+
+//styling begins
+.container{
+	margin: 10px;
+	background-color: @background-color;
+}//this closes the container
+
+h1, h2, h3, h4, a{
+	color:@header-color;
+	font-family:@header-font;
+}
+
+
+//header styles
+header{
+	.flex();
+	justify-content: space-between;
+
+	img{
+		width: 10%;
+		height: auto;
+	}
+
+	.header-div{
+		.flexColumn();
+		padding: 0 40%;
+		justify-content: space-around;
+
+		nav{
+			.flex();
+			.centered();
+		}//closes nav
+
+		h1{
+			font-size:2rem;
+		}
+	}//closes header-div
+}//closes header
+
+//content styles
+.contentContainer{
+	.flex();
+	justify-content:space-between;
+
+	.left{
+		width:30%;
+	}
+
+	.right{
+		width:60%;
+	}
+}
+
+
+hr{
+	width: 95%;
+}
+
+//footer styles
+footer{
+	.flex();
+
+	img{
+		width: 10%;
+		height: auto;
+	}
+
+	nav{
+		.flex();
+		width:70%;
+		justify-content:space-around;
+		align-items: center;
+	}
+}
