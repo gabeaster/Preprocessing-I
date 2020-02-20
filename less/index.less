@@ -96,6 +96,7 @@ html, body {
 }
 
 
+
 //styling begins
 .container{
 	margin: 0 5%;
@@ -137,6 +138,20 @@ header{
 			font-size:3rem;
 		}
 	}//closes header-div
+
+	@media (max-width:500px){
+		.flexColumn();
+		justify-content: center;
+		align-items: center;
+		img{
+			width:auto;
+		}
+		nav{
+			.flexColumn();
+			align-items: center;
+			justify-content: center;
+		}
+	}
 }//closes header
 
 //content styles
@@ -161,6 +176,10 @@ header{
 	.right{
 		width:60%;
 		border-left:1px solid white;
+
+		@media (max-width:500px){
+			border-left:none;
+		}
 		h2{
 			border-bottom:1px solid white;
 			border-top:1px solid white;
@@ -178,6 +197,20 @@ header{
 			h2{display:block;}
 		}//closes softSkills
 	}//closes .right section
+
+	@media (max-width:500px){
+		.flexColumn();
+		font-size:.9rem;
+		padding: none;
+		text-align:center;
+		justify-content:center;
+		align-items:center;
+
+		h2{
+			font-size:1.5rem;
+		}
+		h3{font-size:1.3rem}
+	}
 }//closes contentContainer
 
 

@@ -189,6 +189,23 @@ header .header-div nav a {
 header .header-div h1 {
   font-size: 3rem;
 }
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header img {
+    width: auto;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .contentContainer {
   display: flex;
   justify-content: space-between;
@@ -211,6 +228,11 @@ header .header-div h1 {
   width: 60%;
   border-left: 1px solid white;
 }
+@media (max-width: 500px) {
+  .contentContainer .right {
+    border-left: none;
+  }
+}
 .contentContainer .right h2 {
   border-bottom: 1px solid white;
   border-top: 1px solid white;
@@ -226,6 +248,23 @@ header .header-div h1 {
 }
 .contentContainer .right .softSkills h2 {
   display: block;
+}
+@media (max-width: 500px) {
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    padding: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentContainer h2 {
+    font-size: 1.5rem;
+  }
+  .contentContainer h3 {
+    font-size: 1.3rem;
+  }
 }
 footer {
   display: flex;
